@@ -18,35 +18,31 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void FixedUpdate()
-    {
-        HitTheBalls();
-        CueActivatedDeactivate();
-        CueRotation();        
+    private void Update()
+    {       
+
+        if (_rigidBodyBall.velocity.magnitude < 0.15f)
+        {
+            Vector3 ballPos = _ball.transform.position;
+            _cue.transform.position = ballPos;
+            _cue.SetActive(true);
+            CueRotation();
+            HitTheBalls();
+        }
+        else
+            _cue.SetActive(false);
 
     }
+       
+
 
     private void HitTheBalls()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))        
             _rigidBodyBall.AddRelativeForce(_cueForce, 0, 0);            
         
-    }
-
-            
-    private void CueActivatedDeactivate()
-    {        
-        Vector3 ballPos = _ball.transform.position;
-
-        if (_rigidBodyBall.velocity.magnitude < 0.15f)
-        {
-            _cue.transform.position = ballPos;       
-            _cue.SetActive(true);
-        }
-        else
-            _cue.SetActive(false);
-
-    }
+    }            
+   
 
     private void CueRotation()
     {
@@ -56,7 +52,9 @@ public class GameManager : MonoBehaviour
         var mousePosNearClipPlane = new Vector3(mousePos2D.x, mousePos2D.y, screenToCameraDistance);
         var worldPointPos = _camera.ScreenToWorldPoint(mousePosNearClipPlane);
 
-        _ball.transform.rotation = Quaternion.LookRotation(worldPointPos, Vector3.up);
+        var ballPos = _ball.transform.position;
+        var vectorForRotation = new Vector3(worldPointPos.x - ballPos.x, worldPointPos.y - ballPos.y, worldPointPos.z - ballPos.z);
+        _ball.transform.rotation = Quaternion.LookRotation(vectorForRotation, Vector3.up);
         var tempCueRotation = _ball.transform.rotation;
         _cue.transform.rotation = tempCueRotation;        
 
