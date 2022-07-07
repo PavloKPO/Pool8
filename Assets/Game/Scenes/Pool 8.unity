@@ -2841,7 +2841,7 @@ MonoBehaviour:
   _ball: {fileID: 1549757007}
   _cue: {fileID: 185039365}
   _camera: {fileID: 1372612080}
-  _cueForce: 500
+  _cueForce: 750
 --- !u!1001 &1586459765
 PrefabInstance:
   m_ObjectHideFlags: 0

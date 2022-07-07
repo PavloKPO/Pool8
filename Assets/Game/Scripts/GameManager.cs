@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
         if (_rigidBodyBall.velocity.magnitude < 0.15f)
         {
             Vector3 ballPos = _ball.transform.position;
+            var tempCueRotation = _ball.transform.rotation;
+            _cue.transform.rotation = tempCueRotation;
             _cue.transform.position = ballPos;
             _cue.SetActive(true);
             CueRotation();
@@ -55,8 +57,7 @@ public class GameManager : MonoBehaviour
         var ballPos = _ball.transform.position;
         var vectorForRotation = new Vector3(worldPointPos.x - ballPos.x, worldPointPos.y - ballPos.y, worldPointPos.z - ballPos.z);
         _ball.transform.rotation = Quaternion.LookRotation(vectorForRotation, Vector3.up);
-        var tempCueRotation = _ball.transform.rotation;
-        _cue.transform.rotation = tempCueRotation;        
+                
 
     }
 
