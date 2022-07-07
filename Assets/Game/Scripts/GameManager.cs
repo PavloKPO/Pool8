@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
     private Rigidbody _rbBall;
 
     [SerializeField] private float _cueForce;
+    Vector3 m_NewForce;
              
     
     private void Start()
     {
         _rbBall = GetComponent<Rigidbody>();
-        
+        m_NewForce = new Vector3(1f, 0f, 0f);
     }
 
     private void Update()
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
     private void HitTheBalls()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))        
-            _rbBall.AddRelativeForce(_cueForce, 0, 0);            
+            _rbBall.AddRelativeForce(m_NewForce * _cueForce, ForceMode.Impulse);            
         
     }            
    
