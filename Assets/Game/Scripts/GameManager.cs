@@ -7,26 +7,28 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _ball;
     [SerializeField] private GameObject _cue;
     [SerializeField] private Camera _camera;
-    private Rigidbody _rigidBodyBall;
+    private Rigidbody _rbBall;
 
     [SerializeField] private float _cueForce;
              
     
     private void Start()
     {
-        _rigidBodyBall = GetComponent<Rigidbody>();
+        _rbBall = GetComponent<Rigidbody>();
         
     }
 
     private void Update()
     {       
 
-        if (_rigidBodyBall.velocity.magnitude < 0.15f)
+        if (_rbBall.velocity.magnitude < 0.15f)
         {
             Vector3 ballPos = _ball.transform.position;
+            _cue.transform.position = ballPos;
+
             var tempCueRotation = _ball.transform.rotation;
             _cue.transform.rotation = tempCueRotation;
-            _cue.transform.position = ballPos;
+            
             _cue.SetActive(true);
             CueRotation();
             HitTheBalls();
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
     private void HitTheBalls()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))        
-            _rigidBodyBall.AddRelativeForce(_cueForce, 0, 0);            
+            _rbBall.AddRelativeForce(_cueForce, 0, 0);            
         
     }            
    

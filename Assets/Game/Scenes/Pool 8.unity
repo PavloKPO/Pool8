@@ -982,6 +982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteBall
       objectReference: {fileID: 0}
+    - target: {fileID: 4364966286576634564, guid: 30bac1e976f444243b425670db22d455, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4364966286576634565, guid: 30bac1e976f444243b425670db22d455, type: 3}
       propertyPath: m_Constraints
       value: 80
@@ -2841,7 +2845,7 @@ MonoBehaviour:
   _ball: {fileID: 1549757007}
   _cue: {fileID: 185039365}
   _camera: {fileID: 1372612080}
-  _cueForce: 750
+  _cueForce: 500
 --- !u!1001 &1586459765
 PrefabInstance:
   m_ObjectHideFlags: 0
