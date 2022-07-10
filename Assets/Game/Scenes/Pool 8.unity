@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1529456961612381965, guid: 9ac6df938ea3f0f47abb7290436c9c3a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1529456961612381967, guid: 9ac6df938ea3f0f47abb7290436c9c3a, type: 3}
       propertyPath: m_Name
       value: Cue
@@ -984,11 +988,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4364966286576634564, guid: 30bac1e976f444243b425670db22d455, type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364966286576634564, guid: 30bac1e976f444243b425670db22d455, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4364966286576634565, guid: 30bac1e976f444243b425670db22d455, type: 3}
       propertyPath: m_Constraints
-      value: 80
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364966286576634567, guid: 30bac1e976f444243b425670db22d455, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4364966286576634617, guid: 30bac1e976f444243b425670db22d455, type: 3}
       propertyPath: m_RootOrder
@@ -2845,7 +2857,7 @@ MonoBehaviour:
   _ball: {fileID: 1549757007}
   _cue: {fileID: 185039365}
   _camera: {fileID: 1372612080}
-  _cueForce: 15
+  _cueForce: 20
 --- !u!1001 &1586459765
 PrefabInstance:
   m_ObjectHideFlags: 0
