@@ -467,7 +467,7 @@ MonoBehaviour:
   _cue: {fileID: 185039365}
   _cueSprite: {fileID: 687676431}
   _camera: {fileID: 1372612080}
-  _force: 15
+  _force: 20
 --- !u!1 &226734053
 GameObject:
   m_ObjectHideFlags: 0
