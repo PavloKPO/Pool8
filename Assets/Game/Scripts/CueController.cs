@@ -46,7 +46,7 @@ public class CueController : MonoBehaviour
             var ballPos = _ball.transform.position;
             var vectorForForce = new Vector3(worldPointPos.x - ballPos.x, 0, worldPointPos.z - ballPos.z);
             
-            _rbBall.AddForce(vectorForForce * _force, ForceMode.Impulse);
+            _rbBall.AddForce(vectorForForce.normalized * _force, ForceMode.Impulse);
         }
                 
     }
