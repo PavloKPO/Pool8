@@ -451,6 +451,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1529456961612381967, guid: 9ac6df938ea3f0f47abb7290436c9c3a, type: 3}
   m_PrefabInstance: {fileID: 185039364}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &185039370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1529456961612381960, guid: 9ac6df938ea3f0f47abb7290436c9c3a, type: 3}
+  m_PrefabInstance: {fileID: 185039364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &185039371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,8 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3454056bebb5f7b47a939800014556ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ball: {fileID: 1549757007}
-  _cue: {fileID: 185039365}
+  _ball: {fileID: 1549757008}
+  _cue: {fileID: 185039370}
   _cueSprite: {fileID: 687676431}
   _camera: {fileID: 1372612080}
   _force: 20
@@ -2875,9 +2880,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a2ec4cd00640da4cab3d99ba7c882e0, type: 3}
---- !u!1 &1549757007 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4364966286576634562, guid: 30bac1e976f444243b425670db22d455, type: 3}
+--- !u!54 &1549757008 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4364966286576634565, guid: 30bac1e976f444243b425670db22d455, type: 3}
   m_PrefabInstance: {fileID: 655183180}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1586459765
