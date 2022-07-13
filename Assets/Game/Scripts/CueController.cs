@@ -7,26 +7,22 @@ public class CueController : MonoBehaviour
     [SerializeField] private GameObject _cueSprite;
     [SerializeField] private Camera _camera;
         
-   
-
     [SerializeField] private float _force;
-
-
     
-
+           
     private void Update()
-    {
-        if(_ball.velocity.magnitude < 0.1f)
+    {       
+        if (_ball.velocity.magnitude < 0.1f)
         {
             var ballPos = _ball.transform.position;
             _cue.position = ballPos;
             
             _cueSprite.SetActive(true);
-            CueRotationAndHitTheBalls();            
-            
+            CueRotationAndHitTheBalls();          
         }
         else
-            _cueSprite.SetActive(false);
+            _cueSprite.SetActive(false);       
+        
     }
 
     

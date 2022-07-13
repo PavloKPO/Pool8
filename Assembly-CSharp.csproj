@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Game\Scripts\CueController.cs" />
+    <Compile Include="Assets\Game\Scripts\PocketController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
